@@ -8,7 +8,7 @@
                 </a>
                 <h4 class="hidden font-medium text-xl ml-4 text-gray-600 xl:block">Khách hàng là người thân</h4>
             </div>
-           <div class="hidden w-420px h-9 -ml-40 border border-f5-secondary rounded-2xl px-3.5 text-f5-secondary text-base xl:flex">
+           <div class="hidden w-420px h-9 -ml-40 border border-f5-secondary rounded-2xl px-3.5 text-f5-secondary text-base xl:flex shadow-md focus-within:shadow-secondary">
                <span class="flex items-center mr-2.5"><i class="fas fa-search"></i></span>
                <input type="text" class="w-full h-full focus:outline-none placeholder-f5-secondary" placeholder="Tìm kiếm...">
            </div>
@@ -20,7 +20,7 @@
                </a>
            </div>
         </div>
-        <div @click="isOpenSideNav = false" :class="isOpenSideNav ? 'block' : 'hidden'" class="overlay"></div>
+        <div @click="isOpenSideNav = false" v-if="isOpenSideNav" class="overlay"></div>
         <nav :class="isOpenSideNav ? 'block' : 'hidden'" class="fixed inset-y-0 left-0 overflow-y-auto z-50 w-72 bg-white text-f5-black xl:static xl:overflow-visible xl:block xl:w-full xl:bg-f5-primary xl:text-white">
             <div class="container h-full">
                 <div class="flex items-center justify-between bg-f5-primary px-1 xl:hidden">

@@ -28,6 +28,9 @@ module.exports = {
                     secondary: 'var(--secondary-color)',
                 }
             },
+            boxShadow: {
+                secondary: '0 2px 4px 0 rgba(55, 181, 72, 0.4)',//'var(--secondary-color)'
+            },
             maxWidth: {
                 '1300': '1300px',
             }
