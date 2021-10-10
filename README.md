@@ -1,4 +1,3 @@
-
 # Start app with:
 1. Terminal 1
     >> cd server
@@ -6,3 +5,5 @@
 2. Terminal 2
     >> cd client
     >> npm run dev
+
+Reference website: https://f5mobile.vn/
