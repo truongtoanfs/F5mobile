@@ -1,6 +1,21 @@
 <template>
     <div>
-        <div class="container md:px-28 lg:px-0 lg:grid lg:grid-cols-4 lg:gap-x-2">
+        <div class="container hidden xl:flex items-center py-2 px-2 border-b border-dashed border-gray-300">
+            <div class="font-bold text-lg w-64">Chấp nhận thanh toán:</div>
+            <div class="glide-payment w-payment">
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides">
+                        <li v-for="index in 8" :key="index" class="glide__slide py-4">
+                            <img :src="getImageUrl(`../assets/images/pay/pay-${index}.jpg`)" alt="cod">
+                        </li>
+                        <li v-for="index in 8" :key="index" class="glide__slide py-4">
+                            <img :src="getImageUrl(`../assets/images/pay/pay-${index}.jpg`)" alt="cod">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container md:px-28 lg:px-0 lg:grid lg:grid-cols-4 lg:gap-x-2 overflow-hidden">
             <div class="footer__item">
                 <h2>ĐỊA CHỈ MUA HÀNG</h2>
                 <p>Showroom: Số 420 Cầu Giấy, phường Dịch Vọng, Quận Cầu Giấy, Hà Nội</p>
@@ -48,4 +63,29 @@
     .footer__item p {
         @apply pt-3;
     }
+    .w-payment {
+        width: calc(100% - 256px);
+    }
 </style>
+
+<script>
+import Glide from '@glidejs/glide';
+import { onMounted } from '@vue/runtime-core';
+import { getImageUrl } from '../helpers';
+export default {
+    setup() {
+        onMounted(() => {
+            new Glide('.glide-payment', {
+                type: 'carousel',
+                perView: 10,
+                autoplay: 12000,
+                animationDuration: 1000,
+            }).mount();
+        })
+
+        return {
+            getImageUrl,
+        }
+    }
+}
+</script>

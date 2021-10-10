@@ -33,12 +33,17 @@ module.exports = {
             },
             maxWidth: {
                 '1300': '1300px',
+            },
+            fontSize: {
+                'xsm': ['11px', '14px']
             }
         },
     },
     variants: {
         extend: {
             display: ['group-hover'],
+            maxWidth: ['group-hover'],
+            maxHeight: ['group-hover'],
             padding: ['first'],
         },
     },
