@@ -1,5 +1,5 @@
 <template>
-    <div class="flex items-center pt-3 pb-11 border-b border-gray-300 container px-2">
+    <div class="hidden items-center pt-3 pb-11 border-b border-gray-300 xl:flex">
         <span class="mr-2">Tags:</span>
         <ul class="flex items-center">
             <li v-for="(tag, index) in tags" :key="index" class="py-2 px-2 rounded-md shadow-md bg-white mr-1.5">

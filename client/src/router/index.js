@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import Homepage from '../views/Homepage.vue';
 import ProductCategory from '../views/ProductCategory.vue';
 import ProductItem from '../views/ProductItem.vue';
+import Cart from '../views/Cart.vue';
 import NotFound from '../views/NotFound.vue';
 
 const routes = [
@@ -18,6 +19,10 @@ const routes = [
         path: '/products/:productName',
         component:  ProductItem,
         props: true,
+    },
+    {
+        path: '/cart',
+        component:  Cart,
     },
     {
         path: '/:pathMatch(.*)*',

@@ -1,6 +1,6 @@
 <template>
     <header>
-        <div class="flex items-center justify-between text-f5-secondary text-xl px-2 py-1.5 container xl:px-0">
+        <div class="flex items-center justify-between text-f5-secondary text-xl py-1.5 container xl:px-0">
            <span @click="isOpenSideNav = true" class="p-1 xl:hidden"><i class="fas fa-bars"></i></span>
             <div class="flex items-center">
                 <router-link to="/">
@@ -13,16 +13,26 @@
                <input type="text" class="w-full h-full focus:outline-none placeholder-f5-secondary" placeholder="Tìm kiếm...">
            </div>
            <div class="xl:text-3xl">
-               <span class="p-1 xl:hidden"><i class="fas fa-search"></i></span>
+               <button @click="isOpenSearchBox = true" class="p-1 xl:hidden"><i class="fas fa-search"></i></button>
                <router-link to="/cart" class="p-1 relative">
                    <i class="fas fa-shopping-cart"></i>
                    <span class="absolute -top-1.5 left-4 text-white bg-red-500 text-sm px-1 h-5 rounded-full xl:left-3/4 xl:-top-0.5">0</span>
                </router-link>
+               <div v-if="isOpenSearchBox" class="fixed inset-0 overlay">
+                   <div @clickout="isOpenSearchBox = false" class="bg-gray-100 text-gray-600 flex items-center text-lg py-1">
+                       <button @click="isOpenSearchBox = false" class="px-3 py-1"><i class="fas fa-arrow-left"></i></button>
+                       <div class="flex-1 flex items-center">
+                           <input v-focus type="text" class="w-full px-1 focus:outline-none border-b-2 border-gray-500 bg-transparent placeholder-current" placeholder="Tìm kiếm sản phẩm">
+                           <button class="px-3 py-1"><i class="fas fa-times"></i></button>
+                       </div>
+                       <button class="px-3 py-1"><i class="fas fa-search"></i></button>
+                   </div>
+               </div>
            </div>
         </div>
         <div @click="isOpenSideNav = false" v-if="isOpenSideNav" class="overlay"></div>
         <nav :class="isOpenSideNav ? 'block' : 'hidden'" class="fixed inset-y-0 left-0 overflow-y-auto z-50 w-72 bg-white text-f5-black xl:static xl:overflow-visible xl:block xl:w-full xl:bg-f5-primary xl:text-white">
-            <div class="container h-full">
+            <div class="container px-0 xl:px-2 h-full">
                 <div class="flex items-center justify-between bg-f5-primary px-1 xl:hidden">
                     <router-link to="/">
                         <img class="h-7" src="../assets/images/f5_logo_03.png" alt="logo f5">
@@ -54,7 +64,8 @@ export default {
     setup() {
         const toggleState = reactive({
             isOpenSideNav: false,
-            isOpenNavChildList: -1,//sate close = -1
+            isOpenNavChildList: -1,//state close = -1
+            isOpenSearchBox: false,
         })
 
         function openlinksList(id) {

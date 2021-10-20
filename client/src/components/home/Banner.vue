@@ -1,5 +1,5 @@
 <template>
-    <div class="container px-2 xl:flex">
+    <div class="xl:flex">
         <div class="glide-banner-left w-banner-left pr-2 relative group">
             <div data-glide-el="track" class="glide__track">
                 <ul class="glide__slides">

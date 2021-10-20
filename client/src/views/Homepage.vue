@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-gray-200">
+    <div class="container">
         <banner />
         <product-layout :productsList="iphone11Series" layoutTitle="11/ 11PRO/ 11PROMAX" />
         <product-layout :productsList="iphoneXSeries" layoutTitle="X/ XS/ XSMAX/ XR" />
@@ -16,7 +16,6 @@ import SearchTags from '../components/home/SearchTags.vue';
 import Banner from '../components/home/Banner.vue';
 import { useStore } from 'vuex';
 import { computed } from '@vue/reactivity';
-import { onUpdated } from '@vue/runtime-core';
 
 export default {
     components: {
@@ -27,14 +26,11 @@ export default {
     setup() {
         const store = useStore();
         store.dispatch('getProductsList');
-        const iphone11Series = computed(() => store.getters.iphone11Series);
-        const iphoneXSeries = computed(() => store.getters.iphoneXSeries);
-        const iphone8Series = computed(() => store.getters.iphone8Series);
-        const iphone7Series = computed(() => store.getters.iphone7Series);
-        const iphone6Series = computed(() => store.getters.iphone6Series);
-        onUpdated(() => {
-            console.log(iphone6Series.value);
-        })
+        const iphone11Series = computed(() => store.getters.productCategoryFromName('iphone11Series'));
+        const iphoneXSeries = computed(() => store.getters.productCategoryFromName('iphoneXSeries'));
+        const iphone8Series = computed(() => store.getters.productCategoryFromName('iphone8Series'));
+        const iphone7Series = computed(() => store.getters.productCategoryFromName('iphone7Series'));
+        const iphone6Series = computed(() => store.getters.productCategoryFromName('iphone6Series'));
         
         return {
             iphone11Series,

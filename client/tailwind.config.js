@@ -1,5 +1,5 @@
 module.exports = {
-    purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+    purge: ['./index.html', './src/**/*.{vue,js}'],
     darkMode: false, // or 'media' or 'class'
     theme: {
         extend: {
@@ -36,6 +36,9 @@ module.exports = {
             },
             fontSize: {
                 'xsm': ['11px', '14px']
+            },
+            height: {
+                'sm': '640px',
             }
         },
     },
@@ -44,6 +47,8 @@ module.exports = {
             display: ['group-hover'],
             maxWidth: ['group-hover'],
             maxHeight: ['group-hover'],
+            translate: ['group-hover'],
+            height: ['group-hover'],
             padding: ['first'],
         },
     },

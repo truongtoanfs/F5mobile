@@ -8,11 +8,22 @@
         --secondary-color: #37B548;
         --text-black: #333333;
     }
+    /* width */
+    ::-webkit-scrollbar {
+        @apply w-2;
+    }
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        @apply bg-gray-300 rounded-lg;
+    }
 }
 
 @layer components {
     .container {
-        @apply lg:max-w-3xl lg:mx-auto xl:max-w-1300;
+        @apply px-2 lg:max-w-3xl lg:mx-auto xl:max-w-1300;
+    }
+    .select-box-size {
+        @apply w-4 h-4;
     }
 }
 

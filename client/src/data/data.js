@@ -1,7 +1,7 @@
 const products = [
     {
         "id": 1,
-        "category": "11/11pro/11promax",
+        "category": "12/11mini/12promax",
         "categoryDetail": [
             {
                 "id": 1,
@@ -707,6 +707,712 @@ const products = [
     },
     {
         "id": 2,
+        "category": "11/11pro/11promax",
+        "categoryDetail": [
+            {
+                "id": 1,
+                "type": "iphone 11",
+                "products": [
+                    {
+                        "id": 1,
+                        "title": "iPhone 11 Lock 64GB - Likenew 99,99%",
+                        "path": "/products/iphone-11-lock-64gb-likenew-9999",
+                        "avatar": "/products/iphone-11.jpg",
+                        "currentPrice": 11000000,
+                        "oldPrice": 14000000,
+                        "available": "Còn hàng",
+                        "images": [
+                            {
+                                "id": 1,
+                                "url": "/products/iphone-11",
+                                "color": "",
+                            },
+                            {
+                                "id": 2,
+                                "url": "/products/iphone-11-xanh-ngoc",
+                                "color": "Xanh ngọc",
+                            },
+                            {
+                                "id": 3,
+                                "url": "/products/iphone-11-do",
+                                "color": "Đỏ",
+                            },
+                            {
+                                "id": 4,
+                                "url": "/products/iphone-11-den",
+                                "color": "Đen",
+                            },
+                            {
+                                "id": 5,
+                                "url": "/products/iphone-11-vang",
+                                "color": "Vàng",
+                            },
+                            {
+                                "id": 6,
+                                "url": "/products/iphone-11-trang",
+                                "color": "Trắng",
+                            },
+                            {
+                                "id": 7,
+                                "url": "/products/iphone-11-tim",
+                                "color": "Tím",
+                            },
+
+                        ],
+                        "state": "new99%",
+                        "specifications": {
+                            "screen": "Liquid Retina 6.1 inchs, 828 x 1792 Pixels",
+                            "cpu": "Apple A13 Bionic, 6",
+                            "ram": "4 GB",
+                            "rearCamera": "12.0 MP (4K 60fps) Camera kép góc siêu rộng",
+                            "frontCamera": "12.0 MP (4K 60fps) Slo-motion",
+                            "internalMemory": "64 GB",
+                            "operatingSystem": "iOS 13",
+                            "graphicsChip": "Apple GPU 4 nhân",
+                            "advanceSecurity": "Face ID",
+                            "numberOfSimSlots": "1 Sim vật lý (NanoSim)",
+                            "battery": "Lithium-ion 3110mAh, Lâu hơn iPhone XR 1h",
+                            "connectionType": "Wifi:802.11ax / GPS/GNSS / Bluetooth: v5.0 / GPRS/ NFC",
+                            "color": "Đen, Trắng, Vàng, Đỏ, Xanh ngọc, Tím",
+                            "state": "Máy lướt, hình thức đẹp như mới",
+                        }
+                    },
+                    {
+                        "id": 2,
+                        "title": "iPhone 11 Quốc tế 64GB - Likenew 99,99%",
+                        "path": "/products/iphone-11-quoc-te-64gb-likenew-9999",
+                        "avatar": "/products/iphone-11.jpg",
+                        "currentPrice": 12200000,
+                        "oldPrice": 16000000,
+                        "available": "Còn hàng",
+                        "images": [
+                            {
+                                "id": 1,
+                                "url": "/products/iphone-11",
+                                "color": "",
+                            },
+                            {
+                                "id": 2,
+                                "url": "/products/iphone-11-xanh-ngoc",
+                                "color": "Xanh ngọc",
+                            },
+                            {
+                                "id": 3,
+                                "url": "/products/iphone-11-do",
+                                "color": "Đỏ",
+                            },
+                            {
+                                "id": 4,
+                                "url": "/products/iphone-11-den",
+                                "color": "Đen",
+                            },
+                            {
+                                "id": 5,
+                                "url": "/products/iphone-11-vang",
+                                "color": "Vàng",
+                            },
+                            {
+                                "id": 6,
+                                "url": "/products/iphone-11-trang",
+                                "color": "Trắng",
+                            },
+                            {
+                                "id": 7,
+                                "url": "/products/iphone-11-tim",
+                                "color": "Tím",
+                            },
+
+                        ],
+                        "state": "new99%",
+                        "specifications": {
+                            "screen": "Liquid Retina 6.1 inchs, 828 x 1792 Pixels",
+                            "cpu": "Apple A13 Bionic, 6",
+                            "ram": "4 GB",
+                            "rearCamera": "12.0 MP (4K 60fps) Camera kép góc siêu rộng",
+                            "frontCamera": "12.0 MP (4K 60fps) Slo-motion",
+                            "internalMemory": "64 GB",
+                            "operatingSystem": "iOS 13",
+                            "graphicsChip": "Apple GPU 4 nhân",
+                            "advanceSecurity": "Face ID",
+                            "numberOfSimSlots": "1 Sim vật lý (NanoSim)",
+                            "battery": "Lithium-ion 3110mAh, Lâu hơn iPhone XR 1h",
+                            "connectionType": "Wifi:802.11ax / GPS/GNSS / Bluetooth: v5.0 / GPRS/ NFC",
+                            "color": "Đen, Trắng, Vàng, Đỏ, Xanh ngọc, Tím",
+                            "state": "Máy lướt, hình thức đẹp như mới",
+                        }
+                    },
+                    {
+                        "id": 3,
+                        "title": "iPhone 11 Lock 64GB - Mới 100% đã kích hoạt",
+                        "path": "/products/iphone-11-lock-64gb-moi-100-da-kich-hoat",
+                        "avatar": "/products/iphone-11.jpg",
+                        "currentPrice": 11500000,
+                        "oldPrice": 13400000,
+                        "available": "Còn hàng",
+                        "images": [
+                            {
+                                "id": 1,
+                                "url": "/products/iphone-11",
+                                "color": "",
+                            },
+                            {
+                                "id": 2,
+                                "url": "/products/iphone-11-xanh-ngoc",
+                                "color": "Xanh ngọc",
+                            },
+                            {
+                                "id": 3,
+                                "url": "/products/iphone-11-do",
+                                "color": "Đỏ",
+                            },
+                            {
+                                "id": 4,
+                                "url": "/products/iphone-11-den",
+                                "color": "Đen",
+                            },
+                            {
+                                "id": 5,
+                                "url": "/products/iphone-11-vang",
+                                "color": "Vàng",
+                            },
+                            {
+                                "id": 6,
+                                "url": "/products/iphone-11-trang",
+                                "color": "Trắng",
+                            },
+                            {
+                                "id": 7,
+                                "url": "/products/iphone-11-tim",
+                                "color": "Tím",
+                            },
+
+                        ],
+                        "state": "new100%-actived",
+                        "specifications": {
+                            "screen": "Liquid Retina 6.1 inchs, 828 x 1792 Pixels",
+                            "cpu": "Apple A13 Bionic, 6",
+                            "ram": "4 GB",
+                            "rearCamera": "12.0 MP (4K 60fps) Camera kép góc siêu rộng",
+                            "frontCamera": "12.0 MP (4K 60fps) Slo-motion",
+                            "internalMemory": "64 GB",
+                            "operatingSystem": "iOS 13",
+                            "graphicsChip": "Apple GPU 4 nhân",
+                            "advanceSecurity": "Face ID",
+                            "numberOfSimSlots": "1 Sim vật lý (NanoSim)",
+                            "battery": "Lithium-ion 3110mAh, Lâu hơn iPhone XR 1h",
+                            "connectionType": "Wifi:802.11ax / GPS/GNSS / Bluetooth: v5.0 / GPRS/ NFC",
+                            "color": "Đen, Trắng, Vàng, Đỏ, Xanh ngọc, Tím",
+                            "state": "Máy lướt, hình thức đẹp như mới",
+                        }
+                    },
+                    {
+                        "id": 4,
+                        "title": "iPhone 11 Quốc tế 64GB - Mới 100% đã kích hoạt",
+                        "path": "/products/iphone-11-quoc-te-64gb-moi-100-da-kich-hoat",
+                        "avatar": "/products/iphone-11.jpg",
+                        "currentPrice": 12700000,
+                        "oldPrice": 16400000,
+                        "available": "Còn hàng",
+                        "images": [
+                            {
+                                "id": 1,
+                                "url": "/products/iphone-11",
+                                "color": "",
+                            },
+                            {
+                                "id": 2,
+                                "url": "/products/iphone-11-xanh-ngoc",
+                                "color": "Xanh ngọc",
+                            },
+                            {
+                                "id": 3,
+                                "url": "/products/iphone-11-do",
+                                "color": "Đỏ",
+                            },
+                            {
+                                "id": 4,
+                                "url": "/products/iphone-11-den",
+                                "color": "Đen",
+                            },
+                            {
+                                "id": 5,
+                                "url": "/products/iphone-11-vang",
+                                "color": "Vàng",
+                            },
+                            {
+                                "id": 6,
+                                "url": "/products/iphone-11-trang",
+                                "color": "Trắng",
+                            },
+                            {
+                                "id": 7,
+                                "url": "/products/iphone-11-tim",
+                                "color": "Tím",
+                            },
+
+                        ],
+                        "state": "new100%-actived",
+                        "specifications": {
+                            "screen": "Liquid Retina 6.1 inchs, 828 x 1792 Pixels",
+                            "cpu": "Apple A13 Bionic, 6",
+                            "ram": "4 GB",
+                            "rearCamera": "12.0 MP (4K 60fps) Camera kép góc siêu rộng",
+                            "frontCamera": "12.0 MP (4K 60fps) Slo-motion",
+                            "internalMemory": "64 GB",
+                            "operatingSystem": "iOS 13",
+                            "graphicsChip": "Apple GPU 4 nhân",
+                            "advanceSecurity": "Face ID",
+                            "numberOfSimSlots": "1 Sim vật lý (NanoSim)",
+                            "battery": "Lithium-ion 3110mAh, Lâu hơn iPhone XR 1h",
+                            "connectionType": "Wifi:802.11ax / GPS/GNSS / Bluetooth: v5.0 / GPRS/ NFC",
+                            "color": "Đen, Trắng, Vàng, Đỏ, Xanh ngọc, Tím",
+                            "state": "Máy lướt, hình thức đẹp như mới",
+                        }
+                    },
+                    
+                ]
+            },
+            {
+                "id": 2,
+                "type": "iphone 11 pro",
+                "products": [
+                    {
+                        "id": 1,
+                        "title": "iPhone 11 Pro 64GB - Likenew 99,99%",
+                        "path": "/products/iphone-11-pro-64gb-likenew-9999",
+                        "avatar": "/products/iphone-11-pro.jpg",
+                        "currentPrice": 14900000,
+                        "oldPrice": 19000000,
+                        "available": "Còn hàng",
+                        "images": [
+                            {
+                                "id": 1,
+                                "url": "/products/iphone-11-pro",
+                                "color": "",
+                            },
+                            {
+                                "id": 2,
+                                "url": "/products/iphone-11-pro-xanh-ngoc",
+                                "color": "Xanh midnight",
+                            },
+                            {
+                                "id": 4,
+                                "url": "/products/iphone-11-pro-den",
+                                "color": "Đen",
+                            },
+                            {
+                                "id": 5,
+                                "url": "/products/iphone-11-pro-vang",
+                                "color": "Vàng",
+                            },
+                            {
+                                "id": 6,
+                                "url": "/products/iphone-11-pro-trang",
+                                "color": "Trắng",
+                            },
+                        ],
+                        "state": "new99%",
+                        "specifications": {
+                            "screen": "Super Retina XDR 5.8 inchs, 1125 x 2436 Pixels",
+                            "cpu": "Apple A13 Bionic, 6",
+                            "ram": "4 GB",
+                            "rearCamera": "12.0 MP (4K 60fps) Triple 12MP Ultra Wide, Wide and Telephoto cameras",
+                            "frontCamera": "12.0 MP Selfie ngược sáng HDR, Camera góc rộng, Nhận diện khuôn mặt",
+                            "internalMemory": "64 GB",
+                            "operatingSystem": "iOS 13",
+                            "graphicsChip": "Apple GPU 4 nhân",
+                            "advanceSecurity": "Face ID",
+                            "numberOfSimSlots": "1 Sim vật lý (1 Nano sim), 1 e-sim",
+                            "battery": "Lithium-ion, Lâu hơn iPhone XS 4h",
+                            "connectionType": "Wifi:802.11ax / GPS/GNSS / Bluetooth: v5.0 / GPRS/ NFC",
+                            "color": "Đen, Trắng, Vàng, Xanh",
+                            "state": "Máy lướt, hình thức đẹp như mới",
+                        }
+                    },
+                    {
+                        "id": 2,
+                        "title": "iPhone 11 Pro 64GB - Mới 100% đã kích hoạt",
+                        "path": "/products/iphone-11-pro-64gb-moi-100-da-kich-hoat",
+                        "avatar": "/products/iphone-11-pro.jpg",
+                        "currentPrice": 15400000,
+                        "oldPrice": 20000000,
+                        "available": "Còn hàng",
+                        "images": [
+                            {
+                                "id": 1,
+                                "url": "/products/iphone-11-pro",
+                                "color": "",
+                            },
+                            {
+                                "id": 2,
+                                "url": "/products/iphone-11-pro-xanh-ngoc",
+                                "color": "Xanh midnight",
+                            },
+                            {
+                                "id": 4,
+                                "url": "/products/iphone-11-pro-den",
+                                "color": "Đen",
+                            },
+                            {
+                                "id": 5,
+                                "url": "/products/iphone-11-pro-vang",
+                                "color": "Vàng",
+                            },
+                            {
+                                "id": 6,
+                                "url": "/products/iphone-11-pro-trang",
+                                "color": "Trắng",
+                            },
+                        ],
+                        "state": "new100%-actived",
+                        "specifications": {
+                            "screen": "Super Retina XDR 5.8 inchs, 1125 x 2436 Pixels",
+                            "cpu": "Apple A13 Bionic, 6",
+                            "ram": "4 GB",
+                            "rearCamera": "12.0 MP (4K 60fps) Triple 12MP Ultra Wide, Wide and Telephoto cameras",
+                            "frontCamera": "12.0 MP Selfie ngược sáng HDR, Camera góc rộng, Nhận diện khuôn mặt",
+                            "internalMemory": "64 GB",
+                            "operatingSystem": "iOS 13",
+                            "graphicsChip": "Apple GPU 4 nhân",
+                            "advanceSecurity": "Face ID",
+                            "numberOfSimSlots": "1 Sim vật lý (1 Nano sim), 1 e-sim",
+                            "battery": "Lithium-ion, Lâu hơn iPhone XS 4h",
+                            "connectionType": "Wifi:802.11ax / GPS/GNSS / Bluetooth: v5.0 / GPRS/ NFC",
+                            "color": "Đen, Trắng, Vàng, Xanh",
+                            "state": "Mới 100%, đã kích hoạt",
+                        }
+                    },
+                ]
+            },
+            {
+                "id": 3,
+                "type": "iphone 11 pro max",
+                "products": [
+                    {
+                        "id": 1,
+                        "title": "iPhone 11 Pro Max Lock 64GB - Likenew 99,99%",
+                        "path": "/products/iphone-11-pro-max-lock-64gb-likenew-9999",
+                        "avatar": "/products/iphone-11-pro-max.jpg",
+                        "currentPrice": 15700000,
+                        "oldPrice": 19000000,
+                        "available": "Còn hàng",
+                        "images": [
+                            {
+                                "id": 1,
+                                "url": "/products/iphone-11-pro-max",
+                                "color": "",
+                            },
+                            {
+                                "id": 2,
+                                "url": "/products/iphone-11-pro-max-xanh-ngoc",
+                                "color": "Xanh midnight",
+                            },
+                            {
+                                "id": 4,
+                                "url": "/products/iphone-11-pro-max-den",
+                                "color": "Đen",
+                            },
+                            {
+                                "id": 5,
+                                "url": "/products/iphone-11-pro-max-vang",
+                                "color": "Vàng",
+                            },
+                            {
+                                "id": 6,
+                                "url": "/products/iphone-11-pro-max-trang",
+                                "color": "Trắng",
+                            },
+                        ],
+                        "state": "new99%",
+                        "specifications": {
+                            "screen": "Super Retina XDR 6.5 inchs, 1242 x 2688 Pixels",
+                            "cpu": "Apple A13 Bionic, 6",
+                            "ram": "6 GB",
+                            "rearCamera": "12.0 MP (4K 60fps) Triple 12MP Ultra Wide, Wide and Telephoto cameras",
+                            "frontCamera": "12.0 MP Selfie ngược sáng HDR, Camera góc rộng, Nhận diện khuôn mặt",
+                            "internalMemory": "64 GB",
+                            "operatingSystem": "iOS 13",
+                            "graphicsChip": "Apple GPU 4 nhân",
+                            "advanceSecurity": "Face ID",
+                            "numberOfSimSlots": "1 Sim vật lý (1 Nano sim)",
+                            "battery": "Lithium-ion, Lâu hơn iPhone XS Max 5h",
+                            "connectionType": "Wifi:802.11ax / GPS/GNSS / Bluetooth: v5.0 / GPRS/ NFC",
+                            "color": "Đen, Trắng, Vàng, Xanh",
+                            "state": "Máy lướt, hình thức đẹp như mới, cực ít sử dụng",
+                        }
+                    },
+                    {
+                        "id": 2,
+                        "title": "iPhone 11 Pro Max 64GB - Likenew 99,99%",
+                        "path": "/products/iphone-11-pro-max-64gb-likenew-9999",
+                        "avatar": "/products/iphone-11-pro-max.jpg",
+                        "currentPrice": 17000000,
+                        "oldPrice": 23000000,
+                        "available": "Còn hàng",
+                        "images": [
+                            {
+                                "id": 1,
+                                "url": "/products/iphone-11-pro-max",
+                                "color": "",
+                            },
+                            {
+                                "id": 2,
+                                "url": "/products/iphone-11-pro-max-xanh-ngoc",
+                                "color": "Xanh midnight",
+                            },
+                            {
+                                "id": 4,
+                                "url": "/products/iphone-11-pro-max-den",
+                                "color": "Đen",
+                            },
+                            {
+                                "id": 5,
+                                "url": "/products/iphone-11-pro-max-vang",
+                                "color": "Vàng",
+                            },
+                            {
+                                "id": 6,
+                                "url": "/products/iphone-11-pro-max-trang",
+                                "color": "Trắng",
+                            },
+                        ],
+                        "state": "new99%",
+                        "specifications": {
+                            "screen": "Super Retina XDR 6.5 inchs, 1242 x 2688 Pixels",
+                            "cpu": "Apple A13 Bionic, 6",
+                            "ram": "6 GB",
+                            "rearCamera": "12.0 MP (4K 60fps) Triple 12MP Ultra Wide, Wide and Telephoto cameras",
+                            "frontCamera": "12.0 MP Selfie ngược sáng HDR, Camera góc rộng, Nhận diện khuôn mặt",
+                            "internalMemory": "64 GB",
+                            "operatingSystem": "iOS 13",
+                            "graphicsChip": "Apple GPU 4 nhân",
+                            "advanceSecurity": "Face ID",
+                            "numberOfSimSlots": "1 Sim vật lý (1 Nano sim)",
+                            "battery": "Lithium-ion, Lâu hơn iPhone XS Max 5h",
+                            "connectionType": "Wifi:802.11ax / GPS/GNSS / Bluetooth: v5.0 / GPRS/ NFC",
+                            "color": "Đen, Trắng, Vàng, Xanh",
+                            "state": "Máy lướt, hình thức đẹp như mới, cực ít sử dụng",
+                        }
+                    },
+                    {
+                        "id": 3,
+                        "title": "iPhone 11 Pro Max 256GB - Likenew 99,99%",
+                        "path": "/products/iphone-11-pro-max-256gb-likenew-9999",
+                        "avatar": "/products/iphone-11-pro-max.jpg",
+                        "currentPrice": 19000000,
+                        "oldPrice": 25000000,
+                        "available": "Còn hàng",
+                        "images": [
+                            {
+                                "id": 1,
+                                "url": "/products/iphone-11-pro-max",
+                                "color": "",
+                            },
+                            {
+                                "id": 2,
+                                "url": "/products/iphone-11-pro-max-xanh-ngoc",
+                                "color": "Xanh midnight",
+                            },
+                            {
+                                "id": 4,
+                                "url": "/products/iphone-11-pro-max-den",
+                                "color": "Đen",
+                            },
+                            {
+                                "id": 5,
+                                "url": "/products/iphone-11-pro-max-vang",
+                                "color": "Vàng",
+                            },
+                            {
+                                "id": 6,
+                                "url": "/products/iphone-11-pro-max-trang",
+                                "color": "Trắng",
+                            },
+                        ],
+                        "state": "new99%",
+                        "specifications": {
+                            "screen": "Super Retina XDR 6.5 inchs, 1242 x 2688 Pixels",
+                            "cpu": "Apple A13 Bionic, 6",
+                            "ram": "6 GB",
+                            "rearCamera": "12.0 MP (4K 60fps) Triple 12MP Ultra Wide, Wide and Telephoto cameras",
+                            "frontCamera": "12.0 MP Selfie ngược sáng HDR, Camera góc rộng, Nhận diện khuôn mặt",
+                            "internalMemory": "256 GB",
+                            "operatingSystem": "iOS 13",
+                            "graphicsChip": "Apple GPU 4 nhân",
+                            "advanceSecurity": "Face ID",
+                            "numberOfSimSlots": "1 Sim vật lý (1 Nano sim)",
+                            "battery": "Lithium-ion, Lâu hơn iPhone XS Max 5h",
+                            "connectionType": "Wifi:802.11ax / GPS/GNSS / Bluetooth: v5.0 / GPRS/ NFC",
+                            "color": "Đen, Trắng, Vàng, Xanh",
+                            "state": "Máy lướt, hình thức đẹp như mới, cực ít sử dụng",
+                        }
+                    },
+                    {
+                        "id": 4,
+                        "title": "iPhone 11 Pro Max 256GB - Mới 100% đã kích hoạt",
+                        "path": "/products/iphone-11-pro-max-256gb-moi-100-da-kich-hoat",
+                        "avatar": "/products/iphone-11-pro-max.jpg",
+                        "currentPrice": 20000000,
+                        "oldPrice": 25000000,
+                        "available": "Còn hàng",
+                        "images": [
+                            {
+                                "id": 1,
+                                "url": "/products/iphone-11-pro-max",
+                                "color": "",
+                            },
+                            {
+                                "id": 2,
+                                "url": "/products/iphone-11-pro-max-xanh-ngoc",
+                                "color": "Xanh midnight",
+                            },
+                            {
+                                "id": 4,
+                                "url": "/products/iphone-11-pro-max-den",
+                                "color": "Đen",
+                            },
+                            {
+                                "id": 5,
+                                "url": "/products/iphone-11-pro-max-vang",
+                                "color": "Vàng",
+                            },
+                            {
+                                "id": 6,
+                                "url": "/products/iphone-11-pro-max-trang",
+                                "color": "Trắng",
+                            },
+                        ],
+                        "state": "new100%-actived",
+                        "specifications": {
+                            "screen": "Super Retina XDR 6.5 inchs, 1242 x 2688 Pixels",
+                            "cpu": "Apple A13 Bionic, 6",
+                            "ram": "6 GB",
+                            "rearCamera": "12.0 MP (4K 60fps) Triple 12MP Ultra Wide, Wide and Telephoto cameras",
+                            "frontCamera": "12.0 MP Selfie ngược sáng HDR, Camera góc rộng, Nhận diện khuôn mặt",
+                            "internalMemory": "256 GB",
+                            "operatingSystem": "iOS 13",
+                            "graphicsChip": "Apple GPU 4 nhân",
+                            "advanceSecurity": "Face ID",
+                            "numberOfSimSlots": "1 Sim nano, 1 e-sim",
+                            "battery": "Lithium-ion, Lâu hơn iPhone XS Max 5h",
+                            "connectionType": "Wifi:802.11ax / GPS/GNSS / Bluetooth: v5.0 / GPRS/ NFC",
+                            "color": "Đen, Trắng, Vàng, Xanh",
+                            "state": "Mới 100%, Máy trần, mới 100% đã kích hoạt",
+                        }
+                    },
+                    {
+                        "id": 5,
+                        "title": "iPhone 11 Pro Max Lock 64GB - Mới 100% đã kích hoạt",
+                        "path": "/products/iphone-11-pro-max-lock-64gb-moi-100-da-kich-hoat",
+                        "avatar": "/products/iphone-11-pro-max.jpg",
+                        "currentPrice": 16200000,
+                        "oldPrice": 20700000,
+                        "available": "Còn hàng",
+                        "images": [
+                            {
+                                "id": 1,
+                                "url": "/products/iphone-11-pro-max",
+                                "color": "",
+                            },
+                            {
+                                "id": 2,
+                                "url": "/products/iphone-11-pro-max-xanh-ngoc",
+                                "color": "Xanh midnight",
+                            },
+                            {
+                                "id": 4,
+                                "url": "/products/iphone-11-pro-max-den",
+                                "color": "Đen",
+                            },
+                            {
+                                "id": 5,
+                                "url": "/products/iphone-11-pro-max-vang",
+                                "color": "Vàng",
+                            },
+                            {
+                                "id": 6,
+                                "url": "/products/iphone-11-pro-max-trang",
+                                "color": "Trắng",
+                            },
+                        ],
+                        "state": "new100%-actived",
+                        "specifications": {
+                            "screen": "Super Retina XDR 6.5 inchs, 1242 x 2688 Pixels",
+                            "cpu": "Apple A13 Bionic, 6",
+                            "ram": "6 GB",
+                            "rearCamera": "12.0 MP (4K 60fps) Triple 12MP Ultra Wide, Wide and Telephoto cameras",
+                            "frontCamera": "12.0 MP Selfie ngược sáng HDR, Camera góc rộng, Nhận diện khuôn mặt",
+                            "internalMemory": "64 GB",
+                            "operatingSystem": "iOS 13",
+                            "graphicsChip": "Apple GPU 4 nhân",
+                            "advanceSecurity": "Face ID",
+                            "numberOfSimSlots": "1 Sim nano",
+                            "battery": "Lithium-ion, Lâu hơn iPhone XS Max 5h",
+                            "connectionType": "Wifi:802.11ax / GPS/GNSS / Bluetooth: v5.0 / GPRS/ NFC",
+                            "color": "Đen, Trắng, Vàng, Xanh",
+                            "state": "Mới 100%, đã kích hoạt",
+                        }
+                    },
+                    {
+                        "id": 6,
+                        "title": "iPhone 11 Pro Max 64GB - Mới 100% đã kích hoạt",
+                        "path": "/products/iphone-11-pro-max-64gb-moi-100-da-kich-hoat",
+                        "avatar": "/products/iphone-11-pro-max.jpg",
+                        "currentPrice": 18000000,
+                        "oldPrice": 24300000,
+                        "available": "Còn hàng",
+                        "images": [
+                            {
+                                "id": 1,
+                                "url": "/products/iphone-11-pro-max",
+                                "color": "",
+                            },
+                            {
+                                "id": 2,
+                                "url": "/products/iphone-11-pro-max-xanh-ngoc",
+                                "color": "Xanh midnight",
+                            },
+                            {
+                                "id": 4,
+                                "url": "/products/iphone-11-pro-max-den",
+                                "color": "Đen",
+                            },
+                            {
+                                "id": 5,
+                                "url": "/products/iphone-11-pro-max-vang",
+                                "color": "Vàng",
+                            },
+                            {
+                                "id": 6,
+                                "url": "/products/iphone-11-pro-max-trang",
+                                "color": "Trắng",
+                            },
+                        ],
+                        "state": "new100%-actived",
+                        "specifications": {
+                            "screen": "Super Retina XDR 6.5 inchs, 1242 x 2688 Pixels",
+                            "cpu": "Apple A13 Bionic, 6",
+                            "ram": "6 GB",
+                            "rearCamera": "12.0 MP (4K 60fps) Triple 12MP Ultra Wide, Wide and Telephoto cameras",
+                            "frontCamera": "12.0 MP Selfie ngược sáng HDR, Camera góc rộng, Nhận diện khuôn mặt",
+                            "internalMemory": "64 GB",
+                            "operatingSystem": "iOS 13",
+                            "graphicsChip": "Apple GPU 4 nhân",
+                            "advanceSecurity": "Face ID",
+                            "numberOfSimSlots": "1 Sim nano",
+                            "battery": "Lithium-ion, Lâu hơn iPhone XS Max 5h",
+                            "connectionType": "Wifi:802.11ax / GPS/GNSS / Bluetooth: v5.0 / GPRS/ NFC",
+                            "color": "Đen, Trắng, Vàng, Xanh",
+                            "state": "Mới 100%, Máy trần, mới 100% đã kích hoạt",
+                        }
+                    },
+                ]
+            },
+            
+        ]
+    },
+    {
+        "id": 3,
         "category": "x/xs/xsmax/xr",
         "categoryDetail": [
             {
@@ -1560,7 +2266,7 @@ const products = [
         ]
     },
     {
-        "id": 3,
+        "id": 4,
         "category": "8/8plus",
         "categoryDetail": [
             {
@@ -1739,7 +2445,7 @@ const products = [
         ]
     },
     {
-        "id": 4,
+        "id": 5,
         "category": "7/7plus",
         "categoryDetail": [
             {
@@ -2233,7 +2939,7 @@ const products = [
         ]
     },
     {
-        "id": 5,
+        "id": 6,
         "category": "6/6s/6plus/6splus",
         "categoryDetail": [
             {
@@ -2734,5 +3440,6 @@ const products = [
             
         ]
     },
+    
 ]
 

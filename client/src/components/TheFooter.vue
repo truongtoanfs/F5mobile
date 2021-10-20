@@ -8,9 +8,6 @@
                         <li v-for="index in 8" :key="index" class="glide__slide py-4">
                             <img :src="getImageUrl(`../assets/images/pay/pay-${index}.jpg`)" alt="cod">
                         </li>
-                        <li v-for="index in 8" :key="index" class="glide__slide py-4">
-                            <img :src="getImageUrl(`../assets/images/pay/pay-${index}.jpg`)" alt="cod">
-                        </li>
                     </ul>
                 </div>
             </div>
@@ -76,10 +73,8 @@ export default {
     setup() {
         onMounted(() => {
             new Glide('.glide-payment', {
-                type: 'carousel',
-                perView: 10,
-                autoplay: 12000,
-                animationDuration: 1000,
+                bound: true,
+                perView: 8,
             }).mount();
         })
 

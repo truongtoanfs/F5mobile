@@ -5,6 +5,7 @@ const state = {
     iphone11List: [],
     iphone11ProList: [],
     iphone11ProMaxList: [],
+    iphone11Series: [],
     iphoneXList: [],
     iphoneXsList: [],
     iphoneXsMaxList: [],
@@ -25,18 +26,23 @@ const mutations = {
         state.iphone11List = getDetailProductList(payload, '11/11pro/11promax', 'iphone 11');
         state.iphone11ProList = getDetailProductList(payload, '11/11pro/11promax', 'iphone 11 pro');
         state.iphone11ProMaxList = getDetailProductList(payload, '11/11pro/11promax', 'iphone 11 pro max');
+        state.iphone11Series = state.iphone11List.concat(state.iphone11ProList).concat(state.iphone11ProMaxList);
         state.iphoneXList = getDetailProductList(payload, 'x/xs/xsmax/xr', 'iphone x');
         state.iphoneXsList = getDetailProductList(payload, 'x/xs/xsmax/xr', 'iphone xs');
         state.iphoneXsMaxList = getDetailProductList(payload, 'x/xs/xsmax/xr', 'iphone xs max');
         state.iphoneXrList = getDetailProductList(payload, 'x/xs/xsmax/xr', 'iphone xr');
+        state.iphoneXSeries = state.iphoneXList.concat(state.iphoneXsList).concat(state.iphoneXsMaxList).concat(state.iphoneXrList);
         state.iphone8List = getDetailProductList(payload, '8/8plus', 'iphone 8');
         state.iphone8PlusList = getDetailProductList(payload, '8/8plus', 'iphone 8 plus');
+        state.iphone8Series = state.iphone8List.concat(state.iphone8PlusList);
         state.iphone7List = getDetailProductList(payload, '7/7plus', 'iphone 7');
         state.iphone7PlusList = getDetailProductList(payload, '7/7plus', 'iphone 7 plus');
+        state.iphone7Series = state.iphone7List.concat(state.iphone7PlusList);
         state.iphone6List = getDetailProductList(payload, '6/6s/6plus/6splus', 'iphone 6');
         state.iphone6SList = getDetailProductList(payload, '6/6s/6plus/6splus', 'iphone 6s');
         state.iphone6PLusList = getDetailProductList(payload, '6/6s/6plus/6splus', 'iphone 6 plus');
         state.iphone6SPlusList = getDetailProductList(payload, '6/6s/6plus/6splus', 'iphone 6s plus');
+        state.iphone6Series = state.iphone6List.concat(state.iphone6SList).concat(state.iphone6PLusList).concat(state.iphone6SPlusList);
     },
 };
 
@@ -50,26 +56,7 @@ const actions = {
 
 const getters = {
     productsList: state => state.productsList,
-    iphone11List: state => state.iphone11List,
-    iphone11ProList: state => state.iphone11ProList,
-    iphone11ProMaxList: state => state.iphone11ProMaxList,
-    iphone11Series: state => state.iphone11List.concat(state.iphone11ProList).concat(state.iphone11ProMaxList),
-    iphoneXList: state => state.iphoneXList,
-    iphoneXsList: state => state.iphoneXsList,
-    iphoneXsMaxList: state => state.iphoneXsMaxList,
-    iphoneXrList: state => state.iphoneXrList,
-    iphoneXSeries: state => state.iphoneXList.concat(state.iphoneXsList).concat(state.iphoneXsMaxList).concat(state.iphoneXrList),
-    iphone8List: state => state.iphone8List,
-    iphone8PlusList: state => state.iphone8PlusList,
-    iphone8Series: state => state.iphone8List.concat(state.iphone8PlusList),
-    iphone7List: state => state.iphone7List,
-    iphone7PlusList: state => state.iphone7PlusList,
-    iphone7Series: state => state.iphone7List.concat(state.iphone7PlusList),
-    iphone6List: state => state.iphone6List,
-    iphone6SList: state => state.iphone6SList,
-    iphone6PLusList: state => state.iphone6PLusList,
-    iphone6SPlusList: state => state.iphone6SPlusList,
-    iphone6Series: state => state.iphone6List.concat(state.iphone6SList).concat(state.iphone6PLusList).concat(state.iphone6SPlusList),
+    productCategoryFromName: state => categoryName => state[categoryName],
 };
 
 const productsModule = {

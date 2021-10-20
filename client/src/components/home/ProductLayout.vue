@@ -1,5 +1,5 @@
 <template>
-    <div class="pb-2 px-2 container">
+    <div class="pb-2">
         <div class="py-5 flex flex-col xl:flex-row xl:justify-between xl:items-center xl:py-1">
             <div class="flex flex-col items-center xl:flex-row">
                 <h2 class="text-xl font-bold">{{ layoutTitle }}</h2>
