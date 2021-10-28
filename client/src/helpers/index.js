@@ -5,11 +5,19 @@ export function formatNumberToLocal(number) {
 
 export function calculateDiscountPercent(currentPrice, oldPrice) {
     const disCountPercent = (oldPrice - currentPrice) * 100 / oldPrice;
-    return -Math.round(disCountPercent) + '%';
+    return Math.round(disCountPercent);
 }
 
 export function getImageUrl(path) {
     return new URL(path, import.meta.url).href
+}
+
+export function getDetailProductList(data, categoryName, type = '') {
+    const findCategory = data.find(item => item.category === categoryName);
+    if(type === '') {
+        return findCategory;
+    }
+    return findCategory.categoryDetail.find(item => item.type === type).products;
 }
 
 

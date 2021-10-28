@@ -11,12 +11,17 @@ const routes = [
         component:  Homepage,
     },
     {
-        path: '/categories/:categoryName',
-        component:  ProductCategory,
-        props: true,
+        path: '/categories/:categoryPath',
+        component: ProductCategory,
+        props: route => ({categoryPath: route.path}),
     },
     {
-        path: '/products/:productName',
+        path: '/series/:categoryPath',
+        component: ProductCategory,
+        props: route => ({categoryPath: route.path}),
+    },
+    {
+        path: '/products/:itemPath',
         component:  ProductItem,
         props: true,
     },

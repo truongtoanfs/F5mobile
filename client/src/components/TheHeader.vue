@@ -47,7 +47,7 @@
                         </div>
                         <ul v-if="nav.categoryList" :class="isOpenNavChildList === nav.id ? 'block' : 'hidden'" class="pl-6 pb-1 xl:absolute xl:z-50 xl:inset-x-0 xl:top-full xl:group-hover:flex xl:bg-f5-primary xl:rounded-b-lg xl:py-3">
                             <li v-for="childNav in nav.categoryList" :key="childNav.id" class="xl:pr-40">
-                                <router-link :to="childNav.typePath" class="py-1 inline-block xl:text-lg xl:uppercase xl:font-medium xl:hover:text-black">{{ childNav.typeName }}</router-link>
+                                <router-link :to="childNav.seriesPath" class="py-1 inline-block xl:text-lg xl:uppercase xl:font-medium xl:hover:text-black">{{ childNav.seriesName }}</router-link>
                             </li>
                         </ul>
                     </li>

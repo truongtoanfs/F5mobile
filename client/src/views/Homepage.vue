@@ -26,12 +26,18 @@ export default {
     setup() {
         const store = useStore();
         store.dispatch('getProductsList');
-        const iphone11Series = computed(() => store.getters.productCategoryFromName('iphone11Series'));
-        const iphoneXSeries = computed(() => store.getters.productCategoryFromName('iphoneXSeries'));
-        const iphone8Series = computed(() => store.getters.productCategoryFromName('iphone8Series'));
-        const iphone7Series = computed(() => store.getters.productCategoryFromName('iphone7Series'));
-        const iphone6Series = computed(() => store.getters.productCategoryFromName('iphone6Series'));
+        const iphone11Series = computed(() => getProductList(store.getters.productObjectFromPath('/categories/11-11pro-11promax')));
+        const iphoneXSeries = computed(() => getProductList(store.getters.productObjectFromPath('/categories/x-xs-xsmax-xr')));
+        const iphone8Series = computed(() => getProductList(store.getters.productObjectFromPath('/categories/8-8plus')));
+        const iphone7Series = computed(() => getProductList(store.getters.productObjectFromPath('/categories/7-7plus')));
+        const iphone6Series = computed(() => getProductList(store.getters.productObjectFromPath('/categories/6-6s-6plus-6splus')));
         
+        function getProductList(productObject) {
+            let result = [];
+            productObject?.categoryDetail.forEach(item => result = result.concat(item.products));
+            return result;
+        }
+
         return {
             iphone11Series,
             iphoneXSeries,
