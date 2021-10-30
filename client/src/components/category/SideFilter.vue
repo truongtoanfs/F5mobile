@@ -18,7 +18,7 @@
                     <ul class="mx-2 py-0.5 text-sm xl:ml-2.5">
                         <li v-for="(value, index) in condition" :key="index">
                             <label class="flex items-center px-1.5 py-1.5">
-                                <input class="select-box-size mr-2" type="checkbox" :value="value" v-model="filterValues"> {{ value }}
+                                <input class="select-box-size mr-2" type="checkbox" :value="value" v-model="filterValues"> {{ value === 'Likenew 99,99%' ? 'Likenew 99%' : value }}
                             </label>
                         </li>
                     </ul>

@@ -39,6 +39,9 @@ module.exports = {
             },
             height: {
                 'sm': '640px',
+            },
+            transitionProperty: {
+                'maxHeight': 'maxHeight',
             }
         },
     },

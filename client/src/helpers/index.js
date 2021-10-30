@@ -21,7 +21,7 @@ export function getDetailProductList(data, categoryName, type = '') {
 }
 
 
-/* Convert title to Link
+/* Convert title to Link 
 function removeAccents(str) {
     if(!str) {
         return '';
@@ -38,5 +38,4 @@ props.productsList.forEach(element => {
     arr.push(title2);
 });
 console.log(arr);
-
 */

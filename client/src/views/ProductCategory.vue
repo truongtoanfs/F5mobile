@@ -39,7 +39,6 @@ export default {
 	},
 	setup(props) {
 		/* sort conditions */
-		console.log('props', props.categoryPath);
 		const sortConditions = ['Dòng sản phẩm', 'Mới nhất', 'Giá tăng dần', 'Giá giảm dần', '% Giảm'];
 		const isOpenSideFilter = ref(false);
 

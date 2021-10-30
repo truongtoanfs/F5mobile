@@ -22,8 +22,8 @@ const routes = [
     },
     {
         path: '/products/:itemPath',
-        component:  ProductItem,
-        props: true,
+        component: ProductItem,
+        props: route => ({itemPath: route.path}),
     },
     {
         path: '/cart',

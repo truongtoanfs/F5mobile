@@ -2,7 +2,7 @@ export const navList = [
     {
         id: 1,
         categoryName: '12/ 12mini/ 12promax',
-        categoryPath: '/categories/12-12mini-12promax',
+        categoryPath: '/categories/12-12mini-12pro-12promax',
         categoryList: [
             {
                 id: 1,
@@ -182,4 +182,46 @@ export const navList = [
         categoryPath: '/categories/lienhe',
     },
 ];
+
+export const insurance = new Map();
+insurance.set('new99%', {
+    title: "Giá máy Likenew 99%: luôn mặc định TẶNG MIỄN PHÍ gói bảo hành cao nhất",
+    detail: [
+        'Bảo hành 12 tháng (phần cứng + phần mềm)',
+        'Full phụ kiện: sạc, cáp cao cấp (bảo hành 6 tháng)',
+        'Dán cường lực miễn phí trọn đời. Tặng ốp silicon',
+        'Dùng thử 39 ngày, đổi lỗi Miễn phí',
+        'Với máy Lock hỗ trợ lắp sim ghép lên Quốc tế miễn phí',
+    ],
+})
+insurance.set('new100%-actived', {
+    title: "Giá máy New 100% đã kích hoạt:  luôn mặc định TẶNG MIỄN PHÍ gói bảo hành (không phải mua thêm bảo hành như những nơi khác):",
+    detail: [
+        'Bảo hành 12 tháng (phần cứng + phần mềm)',
+        'Full phụ kiện: sạc, cáp cao cấp (bảo hành 6 tháng)',
+        'Dán cường lực miễn phí trọn đời. Tặng ốp silicon',
+        'Dán cường lực miễn phí trọn đời. Tặng ốp silicon',
+        'Dùng thử 10 ngày, lỗi 1 đổi 1 Miễn phí',
+    ],
+})
+insurance.set('new100%', {
+    title: "Giá máy FullBox New 100% chưa kích hoạt",
+    detail: [
+        'Bảo hành 12 tháng chính hãng Apple và 12 tháng tại cửa hàng',
+        'Full phụ kiện: Hộp, cáp sạc chính hãng Apple (bảo hành 12 tháng)',
+        'Dán cường lực miễn phí trọn đời. Tặng ốp silicon',
+        'Dán cường lực miễn phí trọn đời. Tặng ốp silicon',
+        'Dùng thử 10 ngày, lỗi phần cứng 1 đổi 1',
+    ],
+})
+insurance.set('new100%-vna', {
+    title: "Gía máy FullBox New 100% chính hãng VN/A",
+    detail: [
+        'Bảo hành 12 tháng chính hãng Apple 1 đổi 1 tại FPT hoặc các đơn vị Apple chính hãng trên toàn quốc',
+        'Full phụ kiện: Hộp, cáp sạc chính hãng Apple (bảo hành 12 tháng)',
+        'Dán cường lực miễn phí trọn đời. Tặng ốp silicon',
+        'Dán cường lực miễn phí trọn đời. Tặng ốp silicon',
+    ],
+})
+
 
