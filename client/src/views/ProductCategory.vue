@@ -73,6 +73,7 @@ export default {
         const productObject = computed(() => store.getters.productObjectFromPath(pagePath.value));
 		const productsList = ref([]);
 		watch(productObject, () => {
+			console.log('pdo', productObject.value);
 			productsList.value = [...getProductList(productObject.value)];
 		})
 		function getProductList(productObject) {

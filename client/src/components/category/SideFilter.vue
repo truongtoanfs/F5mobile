@@ -4,7 +4,7 @@
         <div :class="isOpenSideFilter ? 'block' : 'hidden'" class="fixed top-0 right-0 z-50 w-80 h-screen bg-white border-l border-gray-200 shadow-md xl:block xl:static xl:h-auto xl:rounded-xl xl:overflow-hidden xl:border-0 xl:w-64">
             <div class="flex items-center justify-between bg-f5-primary px-1 xl:hidden">
                 <router-link to="/">
-                    <img class="h-7" src="../assets/images/f5_logo_03.png" alt="logo f5">
+                    <img class="h-7" src="/src/assets/images/f5_logo_03.png" alt="logo f5">
                 </router-link>
                 <span @click="$emit('closeSideFilter')" class="text-white p-2 text-xl"><i class="fas fa-times"></i></span>
             </div>

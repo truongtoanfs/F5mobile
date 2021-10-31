@@ -36,7 +36,8 @@ function getProductObjectFromPath(data, path) {
     /* find category by name */
     for(let product of data) {
         for(let model of product.modelsList) {
-            if(model.category.includes(listName)) {
+            const category = model.category.split('-');
+            if(category.includes(listName)) {
                 if(model.category === listName) {
                     return model;
                 } else {
