@@ -36,11 +36,11 @@ function getProductObjectFromPath(data, path) {
     /* find category by name */
     for(let product of data) {
         for(let model of product.modelsList) {
-            const category = model.category.split('-');
-            if(category.includes(listName)) {
-                if(model.category === listName) {
-                    return model;
-                } else {
+            if(model.category === listName) {
+                return model;
+            } else {
+                const category = model.category.split('-');
+                if(category.includes(listName)) {
                     return model.categoryDetail.find(series => series.series === listName);
                 }
             }
