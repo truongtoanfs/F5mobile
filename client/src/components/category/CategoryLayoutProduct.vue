@@ -19,35 +19,33 @@
                 </div>
                 <div class="absolute bottom-0 inset-x-0 py-5 bg-white bg-opacity-90 items-center transform translate-y-14 group-hover:translate-y-0 transition-transform duration-300 hidden xl:flex">
                     <router-link :to="product.path" class="flex-1 py-1 rounded ml-1.5 mr-2.5 text-center bg-f5-secondary border border-f5-secondary text-white hover:text-f5-secondary hover:bg-white"><i class="fas fa-shopping-cart"></i></router-link>
-                    <button @click="statePreviewModal = productIndex" class="flex-1 py-1 rounded mr-1.5 bg-white border border-f5-secondary text-f5-secondary hover:text-white hover:bg-f5-secondary">Xem nhanh</button>
+                    <button @click="showModal(productIndex)" class="flex-1 py-1 rounded mr-1.5 bg-white border border-f5-secondary text-f5-secondary hover:text-white hover:bg-f5-secondary">Xem nhanh</button>
                 </div>
                 <!-- modal product item -->
-                <div v-if="statePreviewModal === productIndex" class="fixed inset-0 z-10 flex justify-center items-start pt-20">
-                    <div @click="statePreviewModal = -1" class="overlay z-0"></div>
-                    <div class="bg-white rounded-sm relative z-10">
+                <div v-if="productModalData.modalState === productIndex" class="fixed inset-0 z-10 flex justify-center items-start pt-20">
+                    <div @click="productModalData.modalState = -1" class="overlay z-0"></div>
+                    <div class="bg-white rounded-sm relative z-10 max-w-960px">
                         <div class="flex">
                             <div class="mr-1 p-4">
-                                <img class="w-347px border border-gray-200" :src="getImageUrl('/src/assets/images/'+ product.avatar)" :alt="product.title">
+                                <img class="w-347px border border-gray-200" :src="productModalData.avatar" :alt="product.title">
                             </div>
-                            <div>
-                                <div class="text-right"><button @click="statePreviewModal = -1" class="text-gray-400 px-2 py-0.5 hover:text-red-500"><i class="fas fa-times"></i></button></div>
+                            <div class="mb-4">
+                                <div class="text-right"><button @click="productModalData.modalState = -1" class="text-gray-400 px-2 py-0.5 hover:text-red-500"><i class="fas fa-times"></i></button></div>
                                 <div class="pr-4">
                                     <h4 class="text-xl font-medium">{{ product.title }}</h4>
                                     <p class="text-gray-600 mt-1">Mã sản phẩm: <span class="text-f5-black">{{ product.title }}</span></p>
-                                    <div class="text-2xl font-semibold mt-2">{{ formatNumberToLocal(product.currentPrice) }}đ</div>
+                                    <div class="text-2xl font-semibold mt-2">{{ productModalData.currentPrice }}đ</div>
                                     <div>
-                                        <span class="text-sm text-gray-600 line-through">{{ formatNumberToLocal(product.oldPrice) }}đ</span>
-                                        <span class="bg-red-500 text-white text-xs font-medium px-1.5 py-px rounded-sm ml-2">-{{calculateDiscountPercent(product.currentPrice, product.oldPrice)}}%</span>
+                                        <span class="text-sm text-gray-600 line-through">{{ productModalData.oldPrice }}đ</span>
+                                        <span class="bg-red-500 text-white text-xs font-medium px-1.5 py-px rounded-sm ml-2">-{{ productModalData.discountPercent }}%</span>
+                                    </div>
+                                    <div v-if="productModalData.colorError" class="border border-dashed border-red-400 px-4 py-2 my-2.5">
+                                        <p class="text-red-500 text-sm font-medium">Quý Khách vui lòng chọn màu sắc, kích thước sản phẩm để tiến hành đặt hàng!</p>
                                     </div>
                                     <div class="flex items-center mt-1">
                                         <span class="text-gray-600 w-28 text-sm">Màu sắc:</span>
                                         <div class="flex flex-wrap">
-                                            <button class="border border-gray-300 px-3 py-1 my-1 mr-2 hover:border-red-500 focus:border-red-500 text-f5-black">Xanh ngọc</button>
-                                            <button class="border border-gray-300 px-3 py-1 my-1 mr-2 hover:border-red-500 focus:border-red-500 text-f5-black">Đỏ</button>
-                                            <button class="border border-gray-300 px-3 py-1 my-1 mr-2 hover:border-red-500 focus:border-red-500 text-f5-black">Đen</button>
-                                            <button class="border border-gray-300 px-3 py-1 my-1 mr-2 hover:border-red-500 focus:border-red-500 text-f5-black">Vàng</button>
-                                            <button class="border border-gray-300 px-3 py-1 my-1 mr-2 hover:border-red-500 focus:border-red-500 text-f5-black">Trắng</button>
-                                            <button class="border border-gray-300 px-3 py-1 my-1 mr-2 hover:border-red-500 focus:border-red-500 text-f5-black">Tím</button>
+                                            <button @click="chooseColor(image)" v-for="image in product.images" :key="image.id" :class="{'border-red-500' : productModalData.selectedColor === image.color}" class="border border-gray-300 px-3 py-1 my-1 mr-2 hover:border-red-500 text-f5-black">{{ image.color }}</button>
                                         </div>
                                     </div>
                                     <div class="flex items-center my-3">
@@ -55,8 +53,10 @@
                                         <quantity-box />
                                     </div>
                                     <div class="flex">
-                                        <button class="flex-1 py-2 rounded bg-red-500 text-white font-medium hover:bg-opacity-70 border border-gray-200 mr-5">Mua ngay</button>
-                                        <button class="flex-1 py-2 rounded border border-f5-primary font-medium hover:bg-opacity-70 bg-red-100">Thêm vào giỏ hàng</button>
+                                        <button @click="checkColour" class="flex-1 py-2 rounded bg-red-500 text-white font-medium hover:bg-opacity-70 border border-gray-200 mr-5">
+                                            <router-link router-link to="/cart">Mua ngay</router-link>
+                                        </button>
+                                        <button @click="checkColour" class="flex-1 py-2 rounded border border-f5-primary font-medium hover:bg-opacity-70 bg-red-100">Thêm vào giỏ hàng</button>
                                     </div>
                                 </div>
                             </div>
@@ -74,7 +74,7 @@
 import { formatNumberToLocal, calculateDiscountPercent, getImageUrl } from '../../helpers';
 import { insurance } from '../../data/initialData';
 import QuantityBox from './QuantityBox.vue';
-import { ref } from 'vue';
+import { reactive, ref } from 'vue';
 export default {
     props: {
         productsList: Array,
@@ -83,14 +83,46 @@ export default {
         QuantityBox,
     },
     setup(props) {
-        const statePreviewModal = ref(-1);
+        const productModalData = reactive({
+            colorError: false,
+            modalState: -1,
+            avatar: '',
+            currentPrice: 0,
+            oldPrice: 0,
+            discountPercent: 0,
+            selectedColor: '',
+        })
+        const selectedProduct = ref({});
+        function showModal(productIndex) {
+            productModalData.modalState = productIndex;
+            selectedProduct.value = props.productsList[productIndex];
+            productModalData.avatar = getImageUrl('/src/assets/images/'+ selectedProduct.value.avatar);
+            productModalData.currentPrice = formatNumberToLocal(selectedProduct.value.currentPrice);
+            productModalData.oldPrice = formatNumberToLocal(selectedProduct.value.oldPrice);
+            productModalData.discountPercent = calculateDiscountPercent(selectedProduct.value.currentPrice, selectedProduct.value.oldPrice);
+        }
+        function checkColour(image) {
+            if(!productModalData.selectedColor) {
+               productModalData.colorError = true;
+            }
+        }
         
+        function chooseColor(image) {
+            productModalData.selectedColor = image.color;
+            productModalData.avatar = getImageUrl('/src/assets/images/'+ image.url);
+            productModalData.currentPrice = formatNumberToLocal(image.price);
+            productModalData.discountPercent = calculateDiscountPercent(image.price, selectedProduct.value.oldPrice);
+            productModalData.colorError = false;
+        }
         return {
             formatNumberToLocal,
             calculateDiscountPercent,
             getImageUrl,
             insurance,
-            statePreviewModal,
+            checkColour,
+            showModal,
+            productModalData,
+            chooseColor,
         }
     },
 }
@@ -107,6 +139,9 @@ export default {
     }
     .w-347px {
         width: 347px;
+    }
+    .max-w-960px {
+        max-width: 960px;
     }
     
 </style>

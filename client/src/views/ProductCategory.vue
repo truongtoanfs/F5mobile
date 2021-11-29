@@ -73,7 +73,6 @@ export default {
         const productObject = computed(() => store.getters.productObjectFromPath(pagePath.value));
 		const productsList = ref([]);
 		watch(productObject, () => {
-			console.log('pdo', productObject.value);
 			productsList.value = [...getProductList(productObject.value)];
 		})
 		function getProductList(productObject) {
@@ -165,9 +164,6 @@ export default {
 
 			}
 		}
-		watch(productsList, () => {
-			console.log('productsList', productsList.value);
-		}, {deep: true})
 		
 		return {
 			sortConditions,
@@ -182,14 +178,3 @@ export default {
     },
 }
 </script>
-
-<style scoped>
-	.filter-content-height {
-		height: calc(100vh - 44px - 72px);
-	}
-	@media screen and (min-width: 1280px) {
-		.filter-content-height {
-			height: auto;
-		}
-	}
-</style>

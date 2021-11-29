@@ -1,5 +1,5 @@
 <template>
-    <div class="mr-3">
+    <div class="xl:mr-3">
         <div v-if="isOpenSideFilter" @click="$emit('closeSideFilter')" class="overlay"></div>
         <div :class="isOpenSideFilter ? 'block' : 'hidden'" class="fixed top-0 right-0 z-50 w-80 h-screen bg-white border-l border-gray-200 shadow-md xl:block xl:static xl:h-auto xl:rounded-xl xl:overflow-hidden xl:border-0 xl:w-64">
             <div class="flex items-center justify-between bg-f5-primary px-1 xl:hidden">

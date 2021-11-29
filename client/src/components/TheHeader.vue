@@ -10,7 +10,7 @@
             </div>
            <div class="hidden w-420px h-9 -ml-40 border border-f5-secondary rounded-2xl px-3.5 text-f5-secondary text-base xl:flex shadow-md focus-within:shadow-secondary">
                <span class="flex items-center mr-2.5"><i class="fas fa-search"></i></span>
-               <input type="text" class="w-full h-full focus:outline-none placeholder-f5-secondary" placeholder="Tìm kiếm...">
+               <input type="text" v-model="searchString" @keyup.enter="handleSearch" class="w-full h-full focus:outline-none placeholder-f5-secondary" placeholder="Tìm kiếm...">
            </div>
            <div class="xl:text-3xl">
                <button @click="isOpenSearchBox = true" class="p-1 xl:hidden"><i class="fas fa-search"></i></button>
@@ -59,7 +59,7 @@
 
 <script>
 import { navList } from '../data/initialData';
-import { reactive, toRefs } from 'vue';
+import { reactive, toRefs, ref, watch } from 'vue';
 export default {
     setup() {
         const toggleState = reactive({
@@ -76,10 +76,17 @@ export default {
             }
         }
 
+        const searchString = ref('');
+        function handleSearch() {
+            console.log('searchString', searchString.value);
+        }
+
         return {
             navList,
             ...toRefs(toggleState),
             openlinksList,
+            searchString,
+            handleSearch,
         }
     },
 }
