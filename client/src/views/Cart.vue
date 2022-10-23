@@ -1,5 +1,5 @@
 <template>
-    <div class="container bg-white rounded-xl">
+    <div class="container mx-auto bg-white rounded-xl">
         <div class="flex justify-between">
             <div>
                 <i class="fas fa-shopping-cart"></i>    

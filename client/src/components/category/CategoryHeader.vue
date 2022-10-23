@@ -4,13 +4,7 @@
         <div class="bg-white text-xl font-medium pl-6 py-2 rounded-r-md flex-1"><i class="fas fa-phone-alt text-base mr-1"></i> 039.6762.825</div>
     </div>
     <h1 class="text-3xl uppercase font-bold text-center pt-5 xl:text-5xl xl:text-right xl:pt-20 xl:pb-16 xl-text-shadow xl:text-white">{{ categoryNav?.categoryName || categoryNav?.seriesName }}</h1>
-    <div class="hidden xl:flex xl:items-center text-2xl">
-        <div class="bg-f5-secondary text-white py-2.5 px-4 rounded-l-md"><span class="block">Bạn có</span> thắc mắc?</div>
-        <div class="bg-white text-2xl font-medium pl-5 py-2.5 rounded-r-md flex-1 flex">
-            <div><span class="block font-bold mr-6">Hãy liên hệ ngay</span>với Chúng tôi</div>
-            <div class="flex items-center text-3xl"><i class="fas fa-phone-alt mr-3"></i> 039.6762.825</div>
-        </div>
-    </div>
+    <category-header-contact />
     <div v-if="categoryNav.categoryList" class="grid grid-cols-3 mt-4 bg-white pt-2 pb-5 rounded-lg xl:mt-7 xl:bg-gray-200 xl:gap-5">
         <template v-for="item in categoryNav.categoryList" :key="item.id">
             <router-link :to="item.seriesPath" class="relative overflow-hidden group xl:flex xl:items-center xl:bg-white xl:rounded-xl xl:p-2">
@@ -23,10 +17,14 @@
 </template>
 
 <script>
-import { getImageUrl } from '../../helpers';
+import CategoryHeaderContact from './CategoryHeaderContact.vue';
+
 export default {
     props: {
         categoryNav: Object,
+    },
+    components: {
+        CategoryHeaderContact,
     }
 }
 </script>

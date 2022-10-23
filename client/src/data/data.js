@@ -3709,28 +3709,3 @@ function getProductListFromPath(data, path) {
     
     return undefined;
 }
-
-const productObject = getProductListFromPath(products, '/categories/11-11pro-11promax');
-
-function getProductList(productObject) {
-    let result = [];
-    productObject.categoryDetail.forEach(item => result = result.concat(item.products));
-    return result;
-}
-
-
-
-
-const iphone8Data = [
-    "iphone-6-quoc-te-64gb-likenew-9999",
-    "iphone-6-quoc-te-16gb-likenew-9999",
-    "iphone-6s-quoc-te-64gb-likenew-9999",
-    "iphone-6s-quoc-te-32gb-likenew-9999",
-    "iphone-6s-quoc-te-16gb-likenew-9999",
-    "iphone-6s-quoc-te-128gb-likenew-9999",
-    "iphone-6s-plus-quoc-te-64gb-likenew-9999",
-    "iphone-6s-plus-quoc-te-32gb-likenew-9999",
-    "iphone-6s-plus-quoc-te-16gb-likenew-9999",
-]
-
-
