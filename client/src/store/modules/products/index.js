@@ -11,7 +11,7 @@ const mutations = {
 
 const actions = {
   getProductsList(context) {
-    axios.get('http://localhost:5000/products').then(response => {
+    axios.get(import.meta.env.VITE_BASE_API_URL).then(response => {
       context.commit('UPDATE_PRODUCT_LISTS', response.data);
     }).catch(error => console.log('Error get products:', error));
   }
