@@ -1,27 +1,16 @@
 <template>
   <div class="container mx-auto">
-    <category-header :categoryNav="categoryNav" />
-    <sort-filter-mobile-buttons
-      @sortProducts="sortProducts"
-      @toggleSideFilter="isOpenSideFilter = !isOpenSideFilter"
-      :sortConditions="sortConditions"
-      :productSortType="productSortType"
-    />
+    <category-header :categoryNav="categoryNav" :isSearch="categoryPath === 'search'" />
+    <sort-filter-mobile-buttons @sortProducts="sortProducts" @toggleSideFilter="isOpenSideFilter = !isOpenSideFilter"
+      :sortConditions="sortConditions" :productSortType="productSortType" />
     <div class="flex mt-2">
-      <side-filter
-        @filterValues="filterProducts"
-        :isOpenSideFilter="isOpenSideFilter"
+      <side-filter @filterValues="filterProducts" :isOpenSideFilter="isOpenSideFilter"
         @closeSideFilter="isOpenSideFilter = false"
-        :filterConditions="productObject?.categoryFilter || productObject?.seriesFilter"
-      />
+        :filterConditions="productObject?.categoryFilter || productObject?.seriesFilter" />
       <div class="flex-1">
         <div class="hidden items-center justify-end bg-white py-1.5 px-4 rounded-lg xl:flex">
-          <sort-on-laptop
-            @sortProducts="sortProducts"
-            :sortConditions="sortConditions"
-            :productSortType="productSortType"
-          />
-          <view-mode />
+          <sort-on-laptop @sortProducts="sortProducts" :sortConditions="sortConditions"
+            :productSortType="productSortType" />
         </div>
         <category-layout-product :productsList="productsList" />
       </div>
@@ -33,7 +22,6 @@ import CategoryHeader from '../components/category/CategoryHeader.vue';
 import SortFilterMobileButtons from '../components/category/SortFilterMobileButtons.vue';
 import SideFilter from '../components/category/SideFilter.vue';
 import SortOnLaptop from '../components/category/SortOnLaptop.vue';
-import ViewMode from '../components/category/ViewMode.vue';
 import CategoryLayoutProduct from '../components/category/CategoryLayoutProduct.vue';
 import { ref, watch, computed } from 'vue';
 import { useStore } from 'vuex';
@@ -48,7 +36,6 @@ export default {
     SortFilterMobileButtons,
     SideFilter,
     SortOnLaptop,
-    ViewMode,
     CategoryLayoutProduct,
   },
   setup(props) {
@@ -60,7 +47,9 @@ export default {
     const productSortType = ref('');
     const pagePath = computed(() => props.categoryPath);
     watch(pagePath, () => {
-      categoryNav.value = findCategoryLinks();
+      if (pagePath !== 'search') {
+        categoryNav.value = findCategoryLinks();
+      }
       productSortType.value = 'Dòng sản phẩm';
     }, { immediate: true })
 
@@ -138,7 +127,6 @@ export default {
 
     /* filter products */
     function filterProducts(filterValues) {
-      console.log('fitler', filterValues.length);
       const originData = [...getProductList(productObject.value)];
       if (filterValues.length === 0) {
         productsList.value = originData;

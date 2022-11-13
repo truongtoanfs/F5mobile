@@ -33,8 +33,8 @@ const routes = [
   {
     path: '/search',
     name: 'Search',
-    component: Search,
-    props: route => ({ query: route.query.q })
+    component: ProductCategory,
+    props: route => ({ categoryPath: 'search', query: route.query.q })
   },
   {
     path: '/cart',

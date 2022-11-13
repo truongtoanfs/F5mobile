@@ -76,7 +76,7 @@
       <div class="container px-0 xl:px-2 h-full">
         <div class="flex items-center justify-between bg-f5-primary px-1 xl:hidden">
           <router-link to="/">
-            <img class="h-7" src="../assets/images/f5_logo_03.png" alt="logo f5" />
+            <img class="h-7" src="../assets/images/logo-mobile.png" alt="logo f5" />
           </router-link>
           <span @click="isOpenSideNav = false" class="text-white p-2 text-xl">
             <i class="fas fa-times"></i>
