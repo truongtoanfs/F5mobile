@@ -11,6 +11,6 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: resolve(__dirname, '../server/public'),
+    outDir: resolve(__dirname, '../server/src/public'),
   },
 })

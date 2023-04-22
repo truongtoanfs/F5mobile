@@ -1,23 +1,29 @@
+const imageModules = import.meta.globEager('/src/assets/images/**');
+
 // format number from 1300 --> 1,300
 export function formatNumberToLocal(number) {
-    return new Intl.NumberFormat().format(number);
+  return new Intl.NumberFormat().format(number);
 }
 
 export function calculateDiscountPercent(currentPrice, oldPrice) {
-    const disCountPercent = (oldPrice - currentPrice) * 100 / oldPrice;
-    return Math.round(disCountPercent);
+  const disCountPercent = (oldPrice - currentPrice) * 100 / oldPrice;
+  return Math.round(disCountPercent);
 }
-
-export function getImageUrl(path) {
-    return new URL(path, import.meta.url).href
+export function getImageUrl(imageUrl) {
+  const path = imageUrl.replace(/\.\.\/assets/, '/src/assets').replace(/\/\//, '/');
+  let staticUrl = '';
+  if (imageModules[path]) {
+    staticUrl = imageModules[path].default
+  }
+  return staticUrl;
 }
 
 export function getDetailProductList(data, categoryName, type = '') {
-    const findCategory = data.find(item => item.category === categoryName);
-    if(type === '') {
-        return findCategory;
-    }
-    return findCategory.categoryDetail.find(item => item.type === type).products;
+  const findCategory = data.find(item => item.category === categoryName);
+  if (type === '') {
+    return findCategory;
+  }
+  return findCategory.categoryDetail.find(item => item.type === type).products;
 }
 
 

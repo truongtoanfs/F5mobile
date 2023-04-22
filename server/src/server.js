@@ -18,6 +18,10 @@ app.use(express.json());
 const route = require('./routes');
 route(app);
 
+// serve images
+const path = require('path');
+app.use('/images', express.static(path.join(__dirname, 'images')));
+
 // Handle production
 if (process.env.NODE_ENV === 'production') {
   // Static folder

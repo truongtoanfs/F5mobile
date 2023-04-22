@@ -11,17 +11,15 @@
     </div>
 </template>
 <script>
-import { watch } from '@vue/runtime-core';
 import { getImageUrl } from '../../helpers';
 export default {
     props: {
-        imageProduct: String,
+      imageProduct: String,
     },
     setup(props) {
-        
-        return {
-            getImageUrl,
-        }
+      return {
+        getImageUrl,
+      }
     },
 }
 </script>
